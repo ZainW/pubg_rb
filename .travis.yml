@@ -1,5 +1,8 @@
 sudo: false
 language: ruby
 rvm:
-  - 2.4.1
-before_install: gem install bundler -v 1.15.4
+- 2.4.1
+before_install:
+- openssl aes-256-cbc -K $encrypted_f8c2d6ea3150_key -iv $encrypted_f8c2d6ea3150_iv
+  -in secrets.yaml.enc -out spec/secrets.yaml -d
+- gem install bundler -v 1.15.4
