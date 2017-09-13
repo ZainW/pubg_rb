@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["zainthegreatcb@gmail.com"]
 
   spec.summary       = %q{This is a basic wrapper for the pubgtracker.com API }
-  spec.description   = %q{Allows you to use the stats that are stroed by pubgtracker.com, this is an unofficial Ruby gem. if there is an issue with the API itself then contact the people at pubgtracker.com}
+  spec.description   = %q{Unofficial Ruby Gem for pubgtracker.com. if there is an issue with the API itself then contact the people at pubgtracker.com}
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.license       = "MIT"
 
