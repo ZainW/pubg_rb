@@ -2,7 +2,7 @@ require "spec_helper"
 require "yaml"
 
 RSpec.describe PubgRb do
-  before(:each) do
+  before(:all) do
     CONFIG = OpenStruct.new YAML.load_file 'spec/secrets.yaml'
     @api_key= CONFIG["APIKEY"]
   end
