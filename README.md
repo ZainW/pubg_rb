@@ -1,9 +1,11 @@
 # PubgRb
 [![Build Status](https://travis-ci.org/ZainW/pubg_rb.svg?branch=master)](https://travis-ci.org/ZainW/pubg_rb)
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/pubg_rb`. To experiment with that code, run `bin/console` for an interactive prompt.
+My gem is to make peoples lives easier when dealing with the pubtracker.com API, 
 
-TODO: Delete this and the text above, and describe your gem
+Version 0.1.0 contains a basic get request with basic tests.
+
+0.2.0 will have a get_json method (0.1.0's get function), get will then return a profile object that will have deifferent methods to parse basic stats (wins, kills, ratings) and have them region based
 
 ## Installation
 
@@ -41,7 +43,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/pubg_rb. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/ZainW/pubg_rb. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
