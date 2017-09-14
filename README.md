@@ -23,7 +23,15 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Initiate the Api using 
+```ruby
+    pubg_client = PubgRb::Api.new('your key here')
+```
+
+You can get people's profile (using their in game name, steamid not supported yet)  
+```ruby
+    pubg_client.get("needmorewood")
+```
 
 ## Development
 
@@ -41,4 +49,4 @@ The gem is available as open source under the terms of the [MIT License](http://
 
 ## Code of Conduct
 
-Everyone interacting in the PubgRb project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/pubg_rb/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the PubgRb project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/ZainW/pubg_rb/blob/master/CODE_OF_CONDUCT.md).
