@@ -1,8 +1,10 @@
 require "pubg_rb/version"
 require "json"
 require 'net/http'
+require "oj"
 
 module PubgRb
+  Oj.mimic_JSON
   class Api
     attr_accessor :api_key
     def initialize (api_key = nil)
