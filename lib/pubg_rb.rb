@@ -2,6 +2,7 @@ require "pubg_rb/version"
 require "json"
 require 'net/http'
 require "oj"
+require "pubg_rb/profile"
 
 module PubgRb
   Oj.mimic_JSON
@@ -30,7 +31,8 @@ module PubgRb
       request.add_field("TRN-Api-Key", @api_key)
       response = http.request(request)
 
-      JSON.parse(response.body)
+      json = JSON.parse(response.body)
+      Profile.new(json)
     end
   end
 end
