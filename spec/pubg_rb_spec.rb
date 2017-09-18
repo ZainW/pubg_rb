@@ -19,4 +19,20 @@ RSpec.describe PubgRb do
   it "Initializes client successfully" do
     expect(PubgRb::Api.new(@api_key)).to be_a PubgRb::Api
   end
+  it "returns a Pubg::Profile object with :platformid, :accountid, :avatar, :selectedregion, :defaultseason, :seasondisplay, :lastupdated, :playername, :pubgtrackerid, :stats, :matchhistory" do
+    api = PubgRb::Api.new(@api_key)
+    profile = api.get("needmorewood")
+    expect(profile).to be_a PubgRb::Profile
+    expect(profile.platformid).to be_a Integer
+    expect(profile.accountid).to be_a String
+    expect(profile.avatar).to be_a String
+    expect(profile.selectedregion).to be_a String
+    expect(profile.defaultseason).to be_a String
+    expect(profile.seasondisplay).to be_a String
+    expect(profile.lastupdated).to be_a DateTime
+    expect(profile.playername).to be_a String
+    expect(profile.pubgtrackerid).to be_a Integer
+    expect(profile.stats).to be_a Array
+    expect(profile.matchhistory).to be_a Array
+  end
 end
