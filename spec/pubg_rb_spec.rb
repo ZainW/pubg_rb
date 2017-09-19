@@ -1,27 +1,27 @@
-require "spec_helper"
-require "yaml"
+require 'spec_helper'
+require 'yaml'
 
 RSpec.describe PubgRb do
   before(:all) do
     CONFIG = OpenStruct.new YAML.load_file 'spec/secrets.yaml'
-    @api_key= CONFIG["APIKEY"]
+    @api_key= CONFIG['APIKEY']
   end
 
-  it "has a version number" do
+  it 'has a version number' do
     expect(PubgRb::VERSION).not_to be nil
   end
 
-  it "raises an ArgumentError when no API key is passed" do
-    expect{PubgRb::Api.new()}.to raise_error(ArgumentError, "Add an `api_key` from `pubgtracker.com`!")
+  it 'raises an ArgumentError when no API key is passed' do
+    expect{PubgRb::Api.new()}.to raise_error(ArgumentError, "Add an `api_key`")
   end
 
   #TODO validate API key somehow
-  it "Initializes client successfully" do
+  it 'Initializes client successfully' do
     expect(PubgRb::Api.new(@api_key)).to be_a PubgRb::Api
   end
-  it "returns a Pubg::Profile object with :platformid, :accountid, :avatar, :selectedregion, :defaultseason, :seasondisplay, :lastupdated, :playername, :pubgtrackerid, :stats, :matchhistory" do
+  it 'returns a Pubg::Profile object with :platformid, :accountid, :avatar, :selectedregion, :defaultseason, :seasondisplay, :lastupdated, :playername, :pubgtrackerid, :stats, :matchhistory' do
     api = PubgRb::Api.new(@api_key)
-    profile = api.get("needmorewood")
+    profile = api.get('needmorewood')
     expect(profile).to be_a PubgRb::Profile
     expect(profile.platformid).to be_a Integer
     expect(profile.accountid).to be_a String
