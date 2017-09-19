@@ -9,7 +9,7 @@ module PubgRb
   class Api
     attr_accessor :api_key
     def initialize (api_key = nil)
-      @api_key = !api_key.nil? ? api_key : raise(ArgumentError, "Add an `api_key` from `pubgtracker.com`!")
+      @api_key = !api_key.nil? ? api_key : raise(ArgumentError, "Add an `api_key`")
     end
     def get_json(nickname = nil)
       nickname = !nickname.nil? ? nickname : raise(ArgumentError, " Nickname not defined: Add your pubg nickname")
