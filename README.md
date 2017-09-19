@@ -23,7 +23,7 @@ Or install it yourself as:
 
     $ gem install pubg_rb
 
-## Usage Nreakling changes since 0.1, please refer to below for updated
+## Usage Breakling changes since 0.1, please refer to below for updated
 
 Initiate the Api using 
 ```ruby
