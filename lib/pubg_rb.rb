@@ -8,8 +8,8 @@ module PubgRb
   Oj.mimic_JSON
   class Api
     attr_accessor :api_key
-    def initialize (api_key = nil)
-      @api_key = !api_key.nil? ? api_key : raise(ArgumentError, "Add an `api_key` from `pubgtracker.com`!")
+    def initialize(api_key = nil)
+      @api_key = !api_key.nil? ? api_key : raise(ArgumentError, "Add an `api_key`")
     end
     def get_json(nickname = nil)
       nickname = !nickname.nil? ? nickname : raise(ArgumentError, " Nickname not defined: Add your pubg nickname")
@@ -22,7 +22,7 @@ module PubgRb
 
       JSON.parse(response.body)
     end
-    def get (nickname = nil)
+    def get(nickname = nil)
       nickname = !nickname.nil? ? nickname : raise(ArgumentError, " Nickname not defined: Add your pubg nickname")
       uri = URI.parse("https://pubgtracker.com/api/profile/pc/#{nickname}")
       http = Net::HTTP.new(uri.host, uri.port)
