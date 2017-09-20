@@ -5,7 +5,7 @@ My gem is to make peoples lives easier when dealing with the pubtracker.com API,
 
 Version 0.1.0 contains a basic get request with basic tests.
 
-0.2.0 will have a get_json method (0.1.0's get function), get will then return a profile object that will have deifferent methods to parse basic stats (wins, kills, ratings) and have them region based
+0.2.0 will have a get_json method (0.1.0's get function)
 
 ## Installation
 
@@ -23,7 +23,7 @@ Or install it yourself as:
 
     $ gem install pubg_rb
 
-## Usage
+## Usage Breakling changes since 0.1, please refer to below for updated
 
 Initiate the Api using 
 ```ruby
@@ -32,7 +32,11 @@ Initiate the Api using
 
 You can get people's profile (using their in game name, steamid not supported yet)  
 ```ruby
-    pubg_client.get("needmorewood")
+    nmw_profile = pubg_client.get("needmorewood")
+```
+Now you have a profile object with the following fields
+```
+    :platformid, :accountid, :avatar, :selectedregion, :defaultseason, :seasondisplay, :lastupdated, :playername, :pubgtrackerid, :stats, :matchhistory
 ```
 
 ## Development

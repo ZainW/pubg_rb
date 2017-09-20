@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["zainxwania@gmail.com"]
 
   spec.summary       = %q{This is a basic wrapper for the pubgtracker.com API }
-  spec.description   = %q{Unofficial Ruby Gem for pubgtracker.com. if there is an issue with the API itself then contact the people at pubgtracker.com}
+  spec.description   = %q{Unofficial Ruby Gem for pubgtracker.com.I AM NOT AFFLIATED}
   spec.homepage      = "https://github.com/ZainW/pubg_rb"
   spec.license       = "MIT"
 
@@ -28,4 +28,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency "pry", "~> 0.10.4"
+  spec.add_dependency 'oj'
 end
