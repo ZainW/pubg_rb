@@ -1,5 +1,5 @@
 # PubgRb
-[![Build Status](https://travis-ci.org/ZainW/pubg_rb.svg?branch=master)](https://travis-ci.org/ZainW/pubg_rb) [![Gem](https://img.shields.io/gem/dt/rails.svg)](https://rubygems.org/gems/pubg_rb)
+[![Build Status](https://travis-ci.org/ZainW/pubg_rb.svg?branch=master)](https://travis-ci.org/ZainW/pubg_rb) [![Gem](https://img.shields.io/gem/dt/pubg_rb.svg)](https://rubygems.org/gems/pubg_rb)
 
 My gem is to make peoples lives easier when dealing with the pubtracker.com API, 
 
